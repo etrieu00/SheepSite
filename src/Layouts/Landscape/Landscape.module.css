@@ -1,0 +1,38 @@
+.Landscape{
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.Sheep, 
+.HillOne, 
+.HillTwo, 
+.HillThree,
+.HillFour,
+.WaterOne,
+.WaterTwo{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+}
+.HillOne{
+    z-index: 0;
+}
+.HillTwo{
+    z-index: -2;
+}
+.HillThree{
+    z-index: -3;
+}
+.HillFour{
+    z-index: -4;
+}
+.WaterOne{
+    z-index: -1;
+}

@@ -107,13 +107,13 @@ const Sky = (props) => {
     return (
         <Clouds>
             <Home 
-            onClick={() => props.click('home')} 
+            onClick={ () => props.click('home') } 
             style={{...cloudStyles, ...cloudPositions[props.page].home}}/>
-            <About onClick={() => props.click('about')} 
+            <About onClick={ () => props.click('about') } 
             style={{...cloudStyles, ...cloudPositions[props.page].about}}/>
-            <Contact onClick={() => props.click('contact')} 
+            <Contact onClick={ () => props.click('contact') } 
             style={{...cloudStyles, ...cloudPositions[props.page].contact}}/>
-            <Links onClick={() => props.click('links')} 
+            <Links onClick={ () => props.click('links') } 
             style={{...cloudStyles, ...cloudPositions[props.page].links}}/>
         </Clouds>
     );

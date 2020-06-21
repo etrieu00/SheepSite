@@ -68,7 +68,6 @@ const Display = (props) => {
             return(
                 <div style={ position.links } >
                     <h1 className={classes.Heading} >Nothing here but us sheeps.</h1>
-                    <p className={classes.Paragraph} >etrieu2@masonlive.gmu.edu</p>
                 </div>
             );
         default:

@@ -41,7 +41,7 @@ const Display = (props) => {
         case 'home':
             return(
                 <div style={ position.home } >
-                    <h1 className={classes.Heading} >Welcome to my little website</h1>
+                    <h1 className={classes.Heading} >Welcome to my little website!</h1>
                     <p className={classes.Paragraph} >This is the home of the dumb looking sheeps.</p>
                     <p className={classes.Paragraph} >A website created for fun while experimenting with React and SVG.</p>
                 </div>

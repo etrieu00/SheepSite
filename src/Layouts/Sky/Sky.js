@@ -8,9 +8,11 @@ import Clouds from '../../Navigation/Clouds/Clouds';
 
 const Sky = (props) => {
     const cloudStyles={
-            width: '15%',
-            height: 'auto',
-            position: 'absolute',
+        width: '15%',
+        height: 'auto',
+        position: 'absolute',
+        transitionTimingFunction: 'ease-in-out',
+        transition: '2.5s',
     }
     const cloudPositions = {
         'home':{
@@ -48,12 +50,12 @@ const Sky = (props) => {
             },
             'contact':{
                 top: '10%',
-                right: '3%',
+                left: '87%',
                 width: '10%',
             },
             'links':{
                 top: '35%',
-                right: '5%',
+                left: '85%',
                 width: '10%',
             }
         },
@@ -70,7 +72,7 @@ const Sky = (props) => {
             },
             'contact':{
                 top: '5%',
-                right: '3%',
+                left: '77%',
                 width: '20%',
             },
             'links':{
@@ -82,55 +84,37 @@ const Sky = (props) => {
         'links':{
             'home':{
                 top: '10%',
-                right: '30%',
+                left: '63%',
                 width: '10%',
             },
             'about':{
-                top: '35%',
-                right: '25%',
+                top: '25%',
+                left: '75%',
                 width: '10%',
             },
             'contact':{
                 top: '40%',
-                right: '3%',
+                left: '80%',
                 width: '10%',
             },
             'links':{
                 top: '3%',
-                right: '3%',
+                left: '77%',
                 width: '20%',
             }
         }
     }
-
-
-    const [page,setPage] = useState({
-        page:'home',
-    });
-    const homeHandler = () => {
-        setPage({page:'home'});
-    };
-    const aboutHandler = () => {
-        setPage({page:'about'});
-    };
-    const contactHandler = () => {
-        setPage({page:'contact'});
-    };
-    const linksHandler = () => {
-        setPage({page:'links'});
-    };
-
     return (
         <Clouds>
             <Home 
-            onClick={homeHandler} 
-            style={{...cloudStyles, ...cloudPositions[page.page].home}}/>
-            <About onClick={aboutHandler} 
-            style={{...cloudStyles, ...cloudPositions[page.page].about}}/>
-            <Contact onClick={contactHandler} 
-            style={{...cloudStyles, ...cloudPositions[page.page].contact}}/>
-            <Links onClick={linksHandler} 
-            style={{...cloudStyles, ...cloudPositions[page.page].links}}/>
+            onClick={() => props.click('home')} 
+            style={{...cloudStyles, ...cloudPositions[props.page].home}}/>
+            <About onClick={() => props.click('about')} 
+            style={{...cloudStyles, ...cloudPositions[props.page].about}}/>
+            <Contact onClick={() => props.click('contact')} 
+            style={{...cloudStyles, ...cloudPositions[props.page].contact}}/>
+            <Links onClick={() => props.click('links')} 
+            style={{...cloudStyles, ...cloudPositions[props.page].links}}/>
         </Clouds>
     );
 };

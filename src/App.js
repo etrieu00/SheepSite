@@ -15,9 +15,9 @@ const App = () => {
 	}
 	return (
 		<div className="App">
-			<Sky page={pages.page} click={handlePageChange}/>
-			<Display page={pages.page}/>
-			<RollingSheep roll={pages.page}/>
+			<Sky page={pages.page} click={handlePageChange} />
+			<Display page={pages.page} />
+			<RollingSheep roll={pages.page} click={handlePageChange} />
 			<Landscape />
 		</div>
 	);

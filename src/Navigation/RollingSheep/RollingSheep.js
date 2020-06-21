@@ -10,13 +10,13 @@ const RollingSheep = (props) => {
     const rolling = (state) =>{
         switch(state){
             case 'home':
-                return (<Rollone className={classes.One}/>);
+                return (<Rollone onClick={ () => props.click('about') } className={classes.One}/>);
             case 'about':
-                return (<Rolltwo className={classes.Two}/>);
+                return (<Rolltwo onClick={ () => props.click('contact') } className={classes.Two}/>);
             case 'contact':
-                return (<Rollthree className={classes.Three}/>);
+                return (<Rollthree onClick={ () => props.click('links') } className={classes.Three}/>);
             case 'links':
-                return (<Rollfour className={classes.Four}/>);
+                return (<Rollfour onClick={ () => props.click('home') } className={classes.Four}/>);
             default:
                 return (<div></div>);
         }

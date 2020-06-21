@@ -11,6 +11,7 @@ const Sky = (props) => {
         width: '15%',
         height: 'auto',
         position: 'absolute',
+        cursor: 'pointer',
         transitionTimingFunction: 'ease-in-out',
         transition: '2.5s',
     }
@@ -88,8 +89,8 @@ const Sky = (props) => {
                 width: '10%',
             },
             'about':{
-                top: '25%',
-                left: '75%',
+                top: '30%',
+                left: '70%',
                 width: '10%',
             },
             'contact':{

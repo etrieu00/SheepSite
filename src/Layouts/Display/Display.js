@@ -6,8 +6,9 @@ const Display = (props) => {
         home: {
             position: 'absolute',
             width: 'auto',
-            left: '40%',
-            top: '40%',
+            height: 'auto',
+            left: '55%',
+            top: '25%',
             transitionTimingFunction: 'ease-in-out',
             transition: '1.5s',
         },
@@ -49,6 +50,7 @@ const Display = (props) => {
             return(
                 <div style={ position.about } >
                     <h1 className={classes.Heading} >About</h1>
+                    <p className={classes.Paragraph} >My name is Eric Trieu.</p>
                     <p className={classes.Paragraph} >I recently graduated in December 2019.</p>
                     <p className={classes.Paragraph} >I enjoy coding and learning new techniques!</p>
                     <p className={classes.Paragraph} >I current work for Trident Systems.</p>
